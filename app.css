@@ -1,0 +1,318 @@
+:root{
+    --success: #009897;
+    --rowback: #f3f3f3;
+    --border: #dddddd;
+    --option: #CDF0EA;
+    --input: #909090;
+    --footer: #b2d8d8;
+}
+body, p, td, th, table, input, button,img, div{
+    padding: 0;
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+}
+body{
+    position: relative;
+}
+.all-table-content{
+    padding-top: 20px;
+}
+.table-pages{
+    margin-bottom: 50px;
+    min-width: 768px;
+    overflow-x: hidden;
+}
+.table-parent{
+    min-width: 800px;
+    width: 80%;
+    margin: 0 auto;
+}
+.table-content  {
+    padding: 10px;
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 50px auto 20px;
+
+}
+.empty{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: 0 auto;
+}
+.empty img{
+    width: 80%;
+    height: 80%;
+}
+thead tr{
+    background-color: var(--success);
+    color: white;
+}
+.table-content th, .table-content td{
+    padding: 12px 15px;
+}
+
+.table-content tbody tr{
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+}
+.table-content tbody tr:nth-child(2n){
+    background-color: var(--rowback);
+}
+.temp{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    margin: 0 auto;
+}
+.dropdown-cities, .dropdown-queries{
+    text-align: left;
+    position: relative;
+    margin: 0 10px;
+}
+
+.dropdown-options{
+    margin-top: 10px;
+    position: absolute;
+    width: 100%;
+}
+.dropdown-container{
+    width: 150px;
+    background-color: var(--success);
+    border-radius: 5px;
+    color: white;
+    padding: 3px 15px;
+    cursor: pointer;
+}
+.cityOptions, .queryOptions{
+    margin-top: 2.5px;
+}
+.cityOptions:hover, .queryOptions:hover{
+    background-color: var(--option);
+    color: var(--success);
+}
+.dropdown-view{
+    display: flex;
+    justify-content: space-between;
+}
+.hide{
+    display: none;
+}
+.search-bar{
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--input);
+    border-radius: 16px;
+    padding-right: 10px;
+    margin: 0 10px;
+}
+.search-bar i{
+    padding: 6px 15px 0px 12px;
+}
+.search-bar input{
+    box-sizing: border-box;
+    border-radius: 4%;
+    border: none;
+    outline: none;
+    color: var(--input);
+}
+.search-button{
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+.search-button button{
+    padding: 4px 15px;
+    background-color: var(--success);
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 3px 1px 0px rgba(0,0,0,0.75);
+    border-radius: 5px;
+}
+.search-button button:active{
+    transform: translateY(1px);
+    box-shadow: none;
+    transition: 0.1s;
+}
+.table-footer{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    background-color: var(--footer);
+    border-radius: 5px;
+}
+.pages{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10px 0;
+    color: white;
+    width: 50%;
+}
+
+.pageNoBig{
+    width: 95px;
+    text-align: center;
+    padding: 5px 0;
+    background-color: var(--success);
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 7px;
+}
+.pageNoSmall{
+    width: 50px;
+    text-align: center;
+    padding: 5px 0;
+    background-color: var(--success);
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 7px;
+}
+.pageInput{
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+.pageInput input{
+    width: 70px;
+    text-align: center;
+    border: none;
+    outline: 2px solid var(--success);
+}
+.disable{
+    opacity: 0.5;
+}
+
+/*********************************************************************************/
+
+.modal-container{
+    height: 100vh;
+    width: 100vw;
+    z-index: 2;
+    position: absolute;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-body{
+    position: relative;
+    position: absolute;
+    max-width: 50%;
+    max-width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    position: fixed;
+    z-index: 10;
+    opacity: 2;
+    background-color: white;
+}
+.stop-scroll{
+    overflow: hidden;
+    height: calc(100vh - 40px);
+}
+.modal-image{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.modal-image img{
+    width: 50%;
+    height: 50%;
+}
+.modal-content{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modal-content p{
+    width: 50%;
+    padding: 5px;
+}
+.modal-close{
+    color: var(--success);
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 30px;
+    cursor: pointer;
+}
+/*********************************************************************************/
+.loading{
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 5;
+}
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: var(--success);
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
+  /**********************************************************************************/
+  @media(max-width: 768px){
+    .temp{
+        width: 100%;
+        display: flex;
+    }
+    .table-pages{
+        overflow-x: scroll;
+    }
+  }
